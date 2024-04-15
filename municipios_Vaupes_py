@@ -1,0 +1,22 @@
+def mostrar_menu():
+    municipios = [
+        "Carurú", 
+        "Mitú", 
+        "Taraira",
+        # Áreas no municipalizadas
+        "Pacoa", 
+        "Papunaua", 
+        "Yavaraté"
+    ]
+
+    print("Municipios y áreas no municipalizadas de Vaupés:")
+    for i, municipio in enumerate(municipios, 1):
+        print(f"{i}. {municipio}")
+
+    eleccion = int(input("Por favor, selecciona un municipio o área no municipalizada por su número: "))
+    if 1 <= eleccion <= len(municipios):
+        print(f"Has seleccionado: {municipios[eleccion - 1]}")
+    else:
+             print("Número inválido. Por favor, intenta de nuevo.")
+
+mostrar_menu()
